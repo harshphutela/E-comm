@@ -6,8 +6,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  console.log(`'/' Get Hitted`);
-  res.end();
+  res.end('hello');
 });
 
 app.listen(3000);
