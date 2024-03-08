@@ -5,12 +5,12 @@ import Login from "./pages/Login";
 
 const App = () => {
   return (
-    <>
+    <div>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Homepage />} />
+        <Route path="/" element={<Login />} />
       </Routes>
-    </>
+    </div>
   );
 };
 

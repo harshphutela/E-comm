@@ -4,8 +4,22 @@ import Globe from "../assets/globe.png";
 import AppleLogo from "../assets/apple-logo.png";
 import FacebookLogo from "../assets/facebook.png";
 import GoogleLogo from "../assets/google.png";
+import EyeIcon from "../assets/eyeicon.png";
 import { Link } from "react-router-dom";
+import API from "../api/API";
+import { useState } from "react";
+import axios from "axios";
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function handleSendData() {
+    const response = await axios.post(API.getCheckCred, {
+      emailSent: email,
+      passSent: password,
+    });
+  }
+
   return (
     <div id="maincontainer" className="bg-gray-100">
       <div id="logincontainer" className="shadow-lg">
@@ -21,53 +35,75 @@ const Login = () => {
           </p>
         </div>
 
-        <div className="flex justify-between ml-3 mr-3 mt-5">
-          <div className="h-9 w-1/4 shadow-2x flex items-center justify-center shadow-lg">
+        <div className="flex justify-between ml-3 mr-3 mt-6">
+          <button
+            className="h-9 w-1/3 shadow-2x flex items-center justify-center shadow-lg"
+            id="shadow"
+          >
             <img className="h-4 w-4" src={GoogleLogo} alt="1" />
-          </div>
+          </button>
 
-          <div className="h-9 w-1/4 shadow-2x flex items-center justify-center shadow-xl">
+          <button
+            className="h-9 w-1/3 shadow-2x flex items-center justify-center shadow-xl ml-3 mr-3"
+            id="shadow"
+          >
             <img className="h-4 w-4" src={AppleLogo} alt="1" />
-          </div>
+          </button>
 
-          <div className="h-9 w-1/4 shadow-2x flex items-center justify-center shadow-xl">
+          <button
+            className="h-9 w-1/3  shadow-2x flex items-center justify-center shadow-xl"
+            id="shadow"
+          >
             <img className="h-4 w-4" src={FacebookLogo} alt="1" />
-          </div>
+          </button>
         </div>
 
-        <div className="text-center mt-2 text-xs">
-          <p>or</p>
+        <div className="text-center mt-4 text-xs">
+          <p className="text-grey">or</p>
         </div>
 
         <div className="w-full mt-3">
           <p className="text-xs ml-3">Email address</p>
           <div className="w-full flex align-center justify-center mt-2">
-            <input placeholder="Enter your email" className="w-11/12"></input>
-          </div>
-        </div>
-
-        <div className="w-full mt-3">
-          <p className="text-xs ml-3">Password</p>
-          <div className="w-full flex align-center justify-center mt-2">
             <input
-              placeholder="●●●●●●●●●"
-              className="w-11/12"
-              type="password"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="Enter your email"
+              className="w-11/12 text-xs h-6 text-grey pl-1"
             ></input>
           </div>
         </div>
 
+        <div className="w-full mt-5">
+          <p className="text-xs ml-3">Password</p>
+          <div className="w-11/12 flex align-center justify-center mt-2 ml-3">
+            <input
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              className="w-11/12 text-xs h-6 text-grey pl-1"
+              placeholder="*********"
+              type="password"
+            ></input>
+            <button className="h-6 w-6 ml-1">
+              <img style={{ opacity: "0.5" }} src={EyeIcon} />
+            </button>
+          </div>
+        </div>
+        {/* 
         <div className="w-11/12 flex justify-between ml-3 mr-5 mt-2">
           <div className="flex align-center justify-center">
             <input type="checkbox" className="mr-1 mt-1" />
             <p className="text-xs mt-1">Remember for 30 days.</p>
           </div>
           <Link>
-            <p className="text-xs mt-1">Forget Password</p>
+            <p className="text-xs mt-1 underline">Forget Password</p>
           </Link>
-        </div>
-        <div className="flex w-full align-center justify-center mt-4">
-          <div
+        </div> */}
+        <div className="flex w-full align-center justify-center mt-5">
+          <button
+            onClick={handleSendData}
             style={{
               height: "40px",
               backgroundColor: "black",
@@ -78,8 +114,8 @@ const Login = () => {
               alignItems: "center",
             }}
           >
-            <button className="text-white">Sign In</button>
-          </div>
+            <p className="text-white">Sign In</p>
+          </button>
         </div>
 
         <div className="flex w-full justify-center mt-3">
