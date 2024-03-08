@@ -1,26 +1,26 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const UserData = require("./assets/userData");
 const app = express();
+const JWT = require("jsonwebtoken");
+const userAuth = require("./middleWare/userAuth");
+const {
+  ExtractToken,
+  verificationModule,
+} = require("./middleWare/ExtractToken");
 app.use(bodyParser.json());
 app.use(cors());
+const SecretKey = "HARSH";
 
-app.post("/", (req, res) => {
-  console.log("Recieved", req.body);
-  const check = UserData.find(
-    (UserDetail) =>
-      UserDetail.email === req.body.emailSent &&
-      UserDetail.password === req.body.passSent
-  );
-  console.log(check);
-  if(check==undefined)
-  {
-    console.log("Not auth");
-  }
-  else{
-    console.log("Auth")
-  }
+app.post("/", userAuth, (req, res) => {
+  const token = JWT.sign(req.body, SecretKey);
+  //   console.log("Generated Token is", token);
+  res.send(token);
+});
+
+app.get("/", ExtractToken, verificationModule, (req, res) => {
+  //   console.log(req.headers.authorization);
+  console.log("Complete Cycle");
 });
 
 app.listen(3000);

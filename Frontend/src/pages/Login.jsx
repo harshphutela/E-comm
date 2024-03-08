@@ -5,18 +5,33 @@ import AppleLogo from "../assets/apple-logo.png";
 import FacebookLogo from "../assets/facebook.png";
 import GoogleLogo from "../assets/google.png";
 import EyeIcon from "../assets/eyeicon.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import API from "../api/API";
 import { useState } from "react";
 import axios from "axios";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   async function handleSendData() {
     const response = await axios.post(API.getCheckCred, {
       emailSent: email,
       passSent: password,
+    });
+    console.log("Token at Front End", response.data);
+    localStorage.setItem("token", response.data);
+    if (response.data === "Not") {
+      alert("NOT AUTH USER");
+    } else {
+      navigate("/home");
+    }
+  }
+
+  async function handleVerifyToken() {
+    const response = await axios.get(API.getCheckCred, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
     });
   }
 
@@ -66,6 +81,7 @@ const Login = () => {
           <p className="text-xs ml-3">Email address</p>
           <div className="w-full flex align-center justify-center mt-2">
             <input
+              type="email"
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -103,7 +119,11 @@ const Login = () => {
         </div> */}
         <div className="flex w-full align-center justify-center mt-5">
           <button
-            onClick={handleSendData}
+            onClick={() => {
+              {
+                handleSendData();
+              }
+            }}
             style={{
               height: "40px",
               backgroundColor: "black",
@@ -116,6 +136,7 @@ const Login = () => {
           >
             <p className="text-white">Sign In</p>
           </button>
+          {/* <button onClick={handleVerifyToken}>check</button> */}
         </div>
 
         <div className="flex w-full justify-center mt-3">
