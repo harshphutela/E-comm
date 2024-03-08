@@ -5,11 +5,13 @@ import Login from "./pages/Login";
 
 const App = () => {
   const navigate = useNavigate();
-  useEffect(()=>{
-   {
-    localStorage.getItem('token') != undefined ? navigate('/home') : navigate('/login')
-   }
-  },[])
+  useEffect(() => {
+    {
+      localStorage.getItem("token") != "NOT"
+        ? navigate("/home")
+        : navigate("/login");
+    }
+  }, []);
   return (
     <div>
       <Routes>

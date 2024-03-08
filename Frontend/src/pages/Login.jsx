@@ -20,7 +20,8 @@ const Login = () => {
     });
     console.log("Token at Front End", response.data);
     localStorage.setItem("token", response.data);
-    if (response.data === "Not") {
+    console.log(response.data);
+    if (response.data === "NOT") {
       alert("NOT AUTH USER");
     } else {
       navigate("/home");

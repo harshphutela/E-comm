@@ -8,6 +8,7 @@ function userAuth(req, res, next) {
   console.log(check);
   if (check == undefined) {
     console.log("Not auth");
+    res.send("NOT")
   } else {
     console.log("Auth");
     next();
