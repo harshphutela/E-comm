@@ -6,11 +6,9 @@ function userAuth(req, res, next) {
       UserDetail.password === req.body.passSent
   );
   console.log(check);
-  if (check == undefined) {
-    console.log("Not auth");
-    res.send("NOT")
+  if (check === undefined) {
+    res.send("NOT");
   } else {
-    console.log("Auth");
     next();
   }
 }

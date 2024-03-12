@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
-import Homepage from "./pages/Homepage";
+import HomeView from "./js/pages/home/view";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Login from "./pages/Login";
+import Login from "../src/js/pages/login/container/index";
 
 const App = () => {
   const navigate = useNavigate();
   useEffect(() => {
     {
-      localStorage.getItem("token") != "NOT"
+      localStorage.getItem("token") != undefined
         ? navigate("/home")
-        : navigate("/login");
+        : navigate("/");
     }
   }, []);
   return (
     <div>
       <Routes>
-        <Route path="/home" element={<Homepage />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<HomeView />} />
+        <Route path="/" element={<Login />} />
       </Routes>
     </div>
   );
