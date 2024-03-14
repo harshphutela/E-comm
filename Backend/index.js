@@ -4,15 +4,19 @@ const cors = require("cors");
 const app = express();
 const dotenv  = require('dotenv')
 const JWT = require("jsonwebtoken");
+
 const userAuth = require("./middleWare/userAuth");
 const {
   ExtractToken,
   verificationModule,
 } = require("./middleWare/ExtractToken");
+
+const { Products } = require("./src/Products");
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static('public'));
 const SecretKey = "HARSH";
-dotenv.config()
+// dotenv.config()
 
 app.post("/", userAuth, (req, res) => {
   const token = JWT.sign(req.body, SecretKey);
@@ -25,7 +29,13 @@ app.get("/", ExtractToken, verificationModule, (req, res) => {
   console.log("Complete Cycle");
 });
 
-app.listen(3000,()=>{
-  console.log(process.env.JWT_SECRET)
-  console.log('Serving on port 3000')
-});
+app.get("/products", (req,res) => {
+  res.send(Products);
+})
+
+
+
+app.listen(3000);
+//   console.log(process.env.JWT_SECRET)
+//   console.log('Serving on port 3000')
+// });
