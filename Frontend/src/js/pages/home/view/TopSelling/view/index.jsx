@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const TopSellingView = ({ TopSellingData }) => {
+  function handleProductDetails(Id) {
+    navigate(`/p/${Id}`);
+    console.log("handlepdcalled");
+  }
+  const navigate = useNavigate();
   return (
     <>
       <div className="w-full bg-white flex justify-center items-center h-36">
@@ -9,7 +15,12 @@ const TopSellingView = ({ TopSellingData }) => {
       <div className="w-full lg:flex">
         {TopSellingData.map((item) => {
           return (
-            <div className="w-full flex justify-center">
+            <div
+              className="w-full flex justify-center"
+              onClick={() => {
+                handleProductDetails(item.Id);
+              }}
+            >
               <div className="lg:flex ml-10">
                 <div>
                   <img

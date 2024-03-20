@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 const NewArrivals = ({ NewArrivalData }) => {
+  const navigate = useNavigate();
+  function handleProductDetails(Id) {
+    navigate(`/p/${Id}`);
+    console.log("handlepdcalled");
+  }
   return (
     <>
       <div className="w-full bg-white flex justify-center items-center h-36">
@@ -7,7 +14,12 @@ const NewArrivals = ({ NewArrivalData }) => {
       <div className="w-full lg:flex">
         {NewArrivalData.map((item) => {
           return (
-            <div className="w-full flex justify-center ">
+            <div
+              className="w-full flex justify-center"
+              onClick={() => {
+                handleProductDetails(item.Id);
+              }}
+            >
               <div className="lg:flex ml-10">
                 <div>
                   <img

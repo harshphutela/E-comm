@@ -1,17 +1,17 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
-import GreenTickIcon from "../../../../../../../../assets/GreenTickIcon.png";
+import GreenTickIcon from "../../../../../../assets/GreenTickIcon.png";
 
 function RatingCard(props) {
   return (
-    <div className=" w-100 border border-gray-200 rounded-lg m-4 p-4 flex-wrap">
+    <div className=" w-full border border-gray-200 rounded-lg m-4 p-4 flex-wrap">
       <div className="flex">
         <ReactStars
           size={20}
           emptyIcon={<i className="far fa-star"></i>}
           readonly={true}
           allowFraction={true}
-          count={3}
+          count={5}
           isHalf={true}
           value={2}
         />

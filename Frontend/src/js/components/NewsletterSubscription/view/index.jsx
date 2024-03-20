@@ -3,8 +3,8 @@ import React from "react";
 const NewsLetterView = () => {
   return (
     <>
-      <div className="w-full flex justify-center mb-6">
-        <div className="bg-black w-11/12 rounded-lg flex justify-center">
+      <div className="w-full flex justify-center mb-6 relative top-16 z-10">
+        <div className="bg-black w-11/12 rounded-3xl flex justify-center">
           <div className="w-4/5 flex">
             <div className="w-1/2">
               <p className=" text-4xl text-white font-extrabold pt-8 pb-8">

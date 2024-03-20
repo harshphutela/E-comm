@@ -11,13 +11,11 @@ const CustomerRatingView = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
+    dots: true,
   };
   return (
     <>
-      <div className="bg-white flex justify-start items-center mt-5 ml-14 mb-6">
+      <div className="bg-white flex justify-start items-center mt-5 ml-14 mb-3">
         <p className=" text-4xl font-black">OUR HAPPY CUSTOMERS</p>
       </div>
 
