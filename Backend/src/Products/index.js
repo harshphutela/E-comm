@@ -9,6 +9,39 @@ const Products = [
     description:
       "asdedf rrg rgr rfgdserwe gbtertfc sdfgt eryh  fdsfgert erg cdv sdfgt er  fgvdfs t re yer g",
     size: ["Small", "Medium", "Large", null],
+    reviews: [
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+    ],
   },
   {
     Id: "2",
@@ -20,6 +53,39 @@ const Products = [
     description:
       "asdedf rrg rgr rfgdserwe gbtertfc sdfgt eryh  fdsfgert erg cdv sdfgt er  fgvdfs t re yer g",
     size: ["Small", null, "Large", null],
+    reviews: [
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+    ],
   },
   {
     Id: "3",
@@ -31,6 +97,39 @@ const Products = [
     description:
       "asdedf rrg rgr rfgdserwe gbtertfc sdfgt eryh  fdsfgert erg cdv sdfgt er  fgvdfs t re yer g",
     size: [null, "Medium", "Large", "XL"],
+    reviews: [
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+    ],
   },
   {
     Id: "4",
@@ -42,6 +141,39 @@ const Products = [
     description:
       "asdedf rrg rgr rfgdserwe gbtertfc sdfgt eryh  fdsfgert erg cdv sdfgt er  fgvdfs t re yer g",
     size: ["Small", null, "Large", "XL"],
+    reviews: [
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+
+      {
+        name: "Samantha D.",
+        review:
+          "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. Its become my favorite go-to shirt.",
+        posted: "Posted on August 14, 2023",
+      },
+    ],
   },
 ];
 module.exports = { Products };
